@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:advanced_bar_chart/advanced_bar_chart.dart';
+import 'package:advanced_bar_chart/bar_chart.dart';
 import 'package:advanced_bar_chart/extensions/bar_direction.dart';
 import 'package:advanced_bar_chart/extensions/list.dart';
 import 'package:advanced_bar_chart/extensions/num_pair.dart';
@@ -12,8 +12,10 @@ import 'package:flutter/material.dart';
 import 'package:num_pair/extensions.dart';
 import 'package:num_pair/num_pair.dart';
 
+import 'objects/bar.dart';
 import 'objects/bar_direction.dart';
 import 'objects/configs.dart';
+import 'objects/group.dart';
 
 class BarChartEngine {
   //Keys

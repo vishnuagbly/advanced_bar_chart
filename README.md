@@ -40,7 +40,7 @@ Here's a quick example to get you started with our bar chart package:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:advanced_bar_chart/advanced_bar_chart.dart';
+import 'package:advanced_bar_chart/bar_chart.dart';
 
 void main() {
   runApp(BarChartApp());
@@ -65,7 +65,7 @@ class BarChartApp extends StatelessWidget {
             maxValue: 100.0,
             groups: [
               Group(
-                bars: [
+                [
                   Bar(75.0, config: BarConfig(color: Colors.blue)),
                   Bar(50.0, config: BarConfig(color: Colors.red)),
                   Bar(25.0, config: BarConfig(color: Colors.green)),
@@ -73,7 +73,7 @@ class BarChartApp extends StatelessWidget {
                 config: GroupConfig(label: (index) => Text('Group $index')),
               ),
               Group(
-                bars: [
+                [
                   Bar(60.0, config: BarConfig(color: Colors.orange)),
                   Bar(30.0, config: BarConfig(color: Colors.purple)),
                   Bar(90.0, config: BarConfig(color: Colors.yellow)),
