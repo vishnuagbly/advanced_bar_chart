@@ -7,12 +7,12 @@ import 'package:num_pair/extensions.dart';
 import 'components/uni_direction_space.dart';
 import 'engine.dart';
 import 'extensions/flex.dart';
+import 'extensions/num.dart';
 import 'extensions/widget.dart';
 import 'objects/bar.dart';
 import 'objects/bar_direction.dart';
 import 'objects/configs.dart';
 import 'objects/group.dart';
-import 'extensions/num.dart';
 
 typedef AxisLabelFn = Widget Function(double value);
 
@@ -368,14 +368,17 @@ class _BarChartState extends State<BarChart> {
       final maxCrossLength = (setScope && !widget.expandableBarThickness)
           ? _engine.calcMaxCrossLength
           : maxConstrainedCrossLength;
-      final maxConstraints = maxCrossLength.toWidthHeightPairAccrToAxis(axis);
-      final size = constraints.copyWith(
-        maxWidth: maxConstraints.$1,
-        maxHeight: maxConstraints.$2,
+      final maxConstraintsValues =
+          maxCrossLength.toWidthHeightPairAccrToAxis(axis);
+      final maxConstraints = constraints.copyWith(
+        maxWidth: maxConstraintsValues.$1,
+        maxHeight: maxConstraintsValues.$2,
       );
-      return SizedBox(
-        width: size.maxWidth,
-        height: size.maxHeight,
+      return ConstrainedBox(
+        constraints: maxConstraints.copyWith(
+          minWidth: math.min(constraints.minWidth, maxConstraints.maxWidth),
+          minHeight: math.min(constraints.minHeight, maxConstraints.maxHeight),
+        ),
         child: setScope ? PopupScope(builder: (_) => chart) : chart,
       );
     });
