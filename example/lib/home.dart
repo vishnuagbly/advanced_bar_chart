@@ -19,7 +19,8 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.white10,
                   padding: const EdgeInsets.all(10.0),
                   child: BarChart(
-                    direction: Direction.right,
+                    expandableBarThickness: true,
+                    direction: Direction.up,
                     defaultConfig: BGDefaultConfig(
                       bar: DefaultBarConfig(
                         bgColor: Colors.white.withOpacity(0.05),
