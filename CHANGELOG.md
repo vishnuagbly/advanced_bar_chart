@@ -1,3 +1,6 @@
+## 0.0.3
+Added axisBarSpace parameter in [BarChart].
+
 ## 0.0.2
 Removed SizedBox and now using ConstrainedBox with dynamically assigned constraints.
 Fixes the bug, causing when using inside an infinite height/width widget, like Column.
