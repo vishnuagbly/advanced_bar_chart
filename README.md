@@ -1,5 +1,7 @@
 ## Bar Chart Package for Flutter
 
+<img src="https://raw.githubusercontent.com/vishnuagbly/advanced_bar_chart/master/logo.png" alt="Logo" height="300">
+
 Welcome to the ultimate bar chart solution for Flutter! Our package offers unparalleled flexibility
 and customization, making it easy to create stunning bar charts in any orientation with advanced
 pop-up capabilities. Whether you're building a simple dashboard or a complex data visualization, our
@@ -104,7 +106,5 @@ Elevate your Flutter applications with our powerful and flexible bar chart packa
 developer working on a personal project or a professional building enterprise-level applications,
 our package will help you create beautiful and functional data visualizations with ease. Try it
 today and transform the way you display data!
-
-For more details and advanced usage, check out our [documentation](link_to_docs).
 
 Happy coding! 🚀
