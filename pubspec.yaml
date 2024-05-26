@@ -1,15 +1,17 @@
 name: advanced_bar_chart
 description: "Create versatile bar charts in any orientation with advanced, customizable pop-ups in Flutter, and easy boundary control."
 version: 0.0.1
-homepage:
+repository: https://github.com/vishnuagbly/advanced_bar_chart
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
+  bubble_pop_up: ^0.1.0+1
   flutter:
     sdk: flutter
+  num_pair: ^0.0.1+1
 
 dev_dependencies:
   flutter_test:
