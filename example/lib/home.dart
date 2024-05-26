@@ -20,15 +20,20 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(10.0),
                   child: BarChart(
                     expandableBarThickness: true,
-                    direction: Direction.up,
+                    direction: Direction.left,
                     defaultConfig: BGDefaultConfig(
                       bar: DefaultBarConfig(
                         bgColor: Colors.white.withOpacity(0.05),
+                        border: BorderRadius.circular(10),
+                        bgBorder: BorderRadius.circular(10),
+                        width: 20,
                       ),
                       group: DefaultGroupConfig(
+                        interBarSpace: 20,
                         label: (index) => Text('Grp $index'),
                       ),
                     ),
+                    axisBarSpace: 10,
                     maxBarsInGroup: 4,
                     maxGroups: 3,
                     maxValue: 100.0,

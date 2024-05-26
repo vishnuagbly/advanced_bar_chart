@@ -63,6 +63,7 @@ class BarChart extends StatefulWidget {
     int? totalBarsPerGroup,
     List<Group>? groups,
     this.interGroupSpace = 10,
+    this.axisBarSpace = 5,
     AxisLabelFn? axisLabel,
     PopUpFn? defaultPopUp,
     this.axisTotalMiddleLabels = 0,
@@ -98,6 +99,9 @@ class BarChart extends StatefulWidget {
   final double maxValue;
   final double minValue;
   final double interGroupSpace;
+
+  ///This is the space between the axis and the bars.
+  final double axisBarSpace;
   final BGDefaultConfig defaultConfig;
   late final List<Group> groups;
   late final int maxBarsInGroup;
@@ -356,6 +360,11 @@ class _BarChartState extends State<BarChart> {
           _engine.isAxisBoxInferred
               ? _axis
               : _axis.getBox((box) => setState(() => _engine.axisBox = box)),
+        if (_engine.showAxis)
+          UniDirectionSpace(
+            axis: _engine.flex.cross.axis,
+            length: widget.axisBarSpace,
+          ),
         ...groups,
       ],
     ).fixDir(_engine);
